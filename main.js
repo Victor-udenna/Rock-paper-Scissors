@@ -1,80 +1,64 @@
-let computerOption = ['Rock', 'Paper', 'Scissors']
+let computerOption = ["Rock", "Paper", "Scissors"];
+
 const computerPlay = () => {
-  return computerOption[Math.floor(Math.random() * computerOption.length)]
+  return computerOption[Math.floor(Math.random() * computerOption.length)];
+};
+
+let playerSelection;
+// let playerSelection = prompt("enter Rock, Paper and Scissors");
+// player option
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, It's a tie!`;
+  } else if (playerSelection == "Rock" && computerSelection == "Paper") {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, Computer wins!`;
+  } else if (playerSelection == "Paper" && computerSelection == "Rock") {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, You win!`;
+  } else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, Computer wins!`;
+  } else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, You win!`;
+  } else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, You win!`;
+  } else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+    return `You picked ${playerSelection} and Computer picked ${computerSelection}, Computer wins!`;
+  } else if (playerSelection === "") {
+    return "Please enter a valid selection";
+  }
 }
 
-// console.log(computerPlay());
-
-
-// let comPuter = "";
-// let You = "";
-// let draw = "";
-
-
-for (let i = 0; i < 5; i++) {
-
-  
-  let playerSelection = prompt('Enter Rock, Paper or Scissors')
-  
-
-  
-
-// const
-
-const computerSelection = computerPlay()
-
-  const playRound = (playerselection, computerselection) => {
-    //Your code here
-    if (playerselection === computerselection) {
-      return `You picked ${playerselection} and Computer picked ${computerselection}, It's a tie `
-    } else if (playerselection == 'Rock' && computerselection == 'Paper') {
-      return `You picked ${playerSelection} and Computer picked ${computerselection}, Computer wins `
-    } else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
-      return `You picked ${playerselection} and Computer picked ${computerSelection}, You win `
-    } else if (playerSelection == 'Paper' && computerSelection == 'Scissors') {
-      return `You picked ${playerselection} and Computer picked ${computerselection}, Computer wins `
-    } else if (playerSelection == 'Scissors' && computerSelection == 'Paper') {
-      return `You picked ${playerselection} and Computer picked ${computerselection}, You win `
-    } else if (playerselection == 'Rock' && computerselection == 'Scissors') {
-      return `You picked ${playerselection} and Computer picked ${computerselection}, You win `
-    } else if (playerselection == 'Scissors' && computerselection == 'Rock') {
-      return `You picked ${playerselection} and Computer picked ${computerselection}, Computer wins `
-    }
-
-   
-
-  }
-
-let roundresult = playRound(computerSelection, playerSelection);
-let playerscore = 0;
-let computerscore = 0;
-
-  const game = (a, b) => {
-
-
-    if (roundresult.includes("It's a tie")) {
-      computerscore = 0;
-      playerscore = 0;
-    }
-   else if (roundresult.includes("Computer wins")) {
-      computerscore++
-    } else if (roundresult.includes("You win")) {
-      playerscore++
-    } 
-
-    if (playerscore > computerscore) {
-      return `You win the game with ${playerscore} points! against Computer's ${computerscore} points`;
-    } else if (playerscore < computerscore) {
-      return `Computer wins the game with ${computerscore} points! against your ${playerscore} points`;
+const game = () => {
+  let playerScore = 0;
+  let computerScore = 0;
+  // keep track of points
+  // loop that run the game 5 times
+  for (let i = 0; i < 5; i++) {
+    let playerselections = prompt("ENTER Rock, Paper and Scissors");
+    playerSelection = playerselections;
+    let computerSelection = computerPlay();
+    let roundresult = playRound(computerSelection, playerSelection);
+    // return playRound(playerSelection, computerSelection);
+    if (roundresult.includes("You win!")) {
+      playerScore++;
+    } else if (roundresult.includes("Computer wins!")) {
+      computerScore++;
     } else {
-      return `Computer has ${computerscore} points and Player has ${playerscore} points. It's a tie!`;
+      ("Enter a valid selection");
     }
 
-    return playRound(a, b);
     console.log(roundresult);
+    // displays the result of a single round
   }
 
-console.log(game(playerSelection, computerSelection));
+  if (playerScore > computerScore) {
+    return `Player wins the game with ${playerScore} points! to Computer's ${computerScore} points`;
+  } else if (playerScore < computerScore) {
+    return `Computer wins! the game with ${computerScore} points! to Player's ${playerScore} points`;
+  } else {
+    return `Computer has ${computerScore} points and Player has ${playerScore} points. It's a tie!`;
+  }
+};
 
-
-}
+console.log(game());
+// displays the winner of all rounds
+// let display = document.querySelector()
