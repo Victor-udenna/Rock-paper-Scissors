@@ -59,6 +59,7 @@ const game = () => {
   }
 };
 
-console.log(game());
+// console.log(game());
 // displays the winner of all rounds
-// let display = document.querySelector()
+let display = document.querySelector('.result');
+display.innerHTML = game();
