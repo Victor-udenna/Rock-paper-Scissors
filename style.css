@@ -11,6 +11,7 @@ body{
     display: flex;
     flex-direction: column;
     overflow: none;
+    font-family: 'Abril Fatface', cursive;
 }
 
 /* .container{
@@ -28,12 +29,13 @@ body{
 }
 
 .header  h1{
-    font-size: 30px;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .logo{
     border-radius: 50%;
-    width: 40px;
+    width: 40px;  
     height: 40px;
 }
 
@@ -71,6 +73,10 @@ body{
     padding: 20px 20px;
     border: none;
     cursor: pointer;
+}
+
+.reset_btn:hover{
+    background-color: rgba(29, 66, 17, 0.901);
 }
 
 .button_containers{
@@ -115,9 +121,19 @@ body{
 }
 
 
+.header  h1{
+    font-size: 35px;
+}
+
+
 }
 
 @media screen and (min-width: 1140px) {
+
+  
+.header  h1{
+    font-size: 45px;
+}
 
     .container{
         width: 70%;
