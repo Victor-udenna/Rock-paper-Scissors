@@ -4,7 +4,7 @@ const computerPlay = () => {
   return computerOption[Math.floor(Math.random() * computerOption.length)];
 };
 
-let playerSelection;
+let playerSelection = "Rock";
 // let playerSelection = prompt("enter Rock, Paper and Scissors");
 // player option
 function playRound(playerSelection, computerSelection) {
@@ -60,8 +60,14 @@ const game = () => {
 };
 
 console.log(game());
-let Rock = document.querySelector('.rock_btn');
-let Paper = document.querySelector('.paper_btn');
-let Scissors = document.querySelector(',scissors_btn');
+// let Rock = document.querySelector('.rock_btn');
+// let Paper = document.querySelector('.paper_btn');
+// let Scissors = document.querySelector(',scissors_btn');
 // displays the winner of all rounds
 // let display = document.querySelector()
+
+
+let reset_btn = document.querySelector('.reset_btn');
+reset_btn.addEventListener('click', function () {
+  window.location.reload();
+})
