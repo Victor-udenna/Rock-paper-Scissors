@@ -1,51 +1,61 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rock / paper scissors</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="logo_container">
-            <img src="./images/logo.png" alt="" class="logo">
+      <div class="logo_container">
+        <img src="./images/logo.png" alt="" class="logo" />
+      </div>
+      <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <main class="container">
+      <div class="Player">
+        <h3>You</h3>
+        <h3>vs</h3>
+        <h3>Computer</h3>
+      </div>
+
+      <section class="display_winner">
+        <div class="winner_of_singleround">
+          <h4 class="singlround_text">
+            You picked Paper and Computer picked Rock, You win!
+          </h4>
         </div>
-         <h1>Rock Paper Scissors</h1>
-    </header> 
 
-    <main class="container">    
-<div class="Player">
-    <h3>You</h3> <h3>vs</h3> <h3>Computer</h3>
-</div> 
-
-<section class="display_winner">
-    <div class="winner_of_singleround">
-<h4 class="singlround_text">
-    You picked Paper and Computer picked Rock, You win!
-</h4>
-</div>
-    
-<div class="winner_overall">
-<h3 class="overall_text">
-    Player wins the game with 3 points! to Computer's 0 points
-</h3>
-</div>
-</section>
-
-<section class="control">
-    <div class="reset_btn_container">
-        <button class="reset_btn"><img src="./images/arrow-clockwise.svg" alt=""></button>
+        <div class="winner_overall">
+          <h3 class="overall_text">
+            Player wins the game with 3 points! to Computer's 0 points
+          </h3>
         </div>
-        
+      </section>
+
+      <section class="control">
+        <div class="reset_btn_container">
+          <button class="reset_btn">
+            <img src="./images/arrow-clockwise.svg" alt="" />
+          </button>
+        </div>
+
         <div class="button_containers">
-            <buttons type="button" value="Rock" class="rock_btn"><img src="./images/Rock.png" alt="" width="20px"></buttons>
-            <buttons type="button" value="Paper" class="paper_btn"><img src="./images/paper.png" alt="" width="20px"></buttons>
-            <buttons type="button" value="Scissors" class="scissors_btn"><img src="./images/scissors.png" alt="" width="20px"></buttons>
+          <buttons type="button" value="Rock" class="rock_btn"
+            ><img src="./images/Rock.png" alt="" width="20px"
+          /></buttons>
+          <buttons type="button" value="Paper" class="paper_btn"
+            ><img src="./images/paper.png" alt="" width="20px"
+          /></buttons>
+          <buttons type="button" value="Scissors" class="scissors_btn"
+            ><img src="./images/scissors.png" alt="" width="20px"
+          /></buttons>
         </div>
-</section>
-</main>
-</body>
-<script src="main.js"></script>
+      </section>
+    </main>
+  </body>
+  <script src="main.js"></script>
 </html>
