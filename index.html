@@ -7,31 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-   
-
-    <main>
-        <header><h1>Rock Paper Scissors</h1></header>
-        <section class="score">
-            <div class="your-score">
-                <h6>you</h6>
-                <h2 class="your_score">1</h2>
-            </div>
-
-            <div class="computer-score">
-                <h6>computer</h6>
-               <h2 class="computer_score">0</h2>
-            </div>
-        </section>
-
-        <div><span class="winner"></span></div>
-<div class="result">..</div>
-        <div class="button_container">
-            <button class="rock_btn" value="Rock">Rock</button>
-            <button class="paper_btn" value="Paper">Paper</button>
-            <button class="scissors_btn" value="Scissors">Scissors</button>
+    <header class="header">
+        <div class="logo_container">
+            <img src="./images/logo.png" alt="" class="logo">
         </div>
-    </main>
+         <h1>Rock Paper Scissors</h1>
+    </header> 
+
+    <main class="container">    
+<div class="Player">
+    <h3>You</h3> <h3>vs</h3> <h3>Computer</h3>
+</div> 
+
+<section class="display_winner">
+    <div class="winner_of_singleround">
+<p class="singlround_text">
+    You picked Paper and Computer picked Rock, You win!
+</p>
+</div>
+    
+<div class="winner_overall">
+<p class="overall_text">
+    Player wins the game with 3 points! to Computer's 0 points
+</p>
+</div>
+</section>
+
+<section class="control">
+    <div class="reset_btn_container">
+        <button class="reset_btn"><img src="./images/arrow-clockwise.svg" alt=""></button>
+        </div>
+        
+        <div class="button_containers">
+            <buttons type="button" value="Rock" class="rock_btn"><img src="./images/Rock.png" alt="" width="20px"></buttons>
+            <buttons type="button" value="Paper" class="paper_btn"><img src="./images/paper.png" alt="" width="20px"></buttons>
+            <buttons type="button" value="Scissors" class="scissors_btn"><img src="./images/scissors.png" alt="" width="20px"></buttons>
+        </div>
+</section>
+</main>
 </body>
 <script src="main.js"></script>
 </html>

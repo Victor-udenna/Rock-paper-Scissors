@@ -59,7 +59,9 @@ const game = () => {
   }
 };
 
-// console.log(game());
+console.log(game());
+let Rock = document.querySelector('.rock_btn');
+let Paper = document.querySelector('.paper_btn');
+let Scissors = document.querySelector(',scissors_btn');
 // displays the winner of all rounds
-let display = document.querySelector('.result');
-display.innerHTML = game();
+// let display = document.querySelector()
