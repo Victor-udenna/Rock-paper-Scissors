@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: none;
-  font-family: "Comfortaa", cursive;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .header {
