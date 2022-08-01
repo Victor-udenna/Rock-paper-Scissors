@@ -60,11 +60,22 @@ const game = () => {
 };
 
 console.log(game());
-// let Rock = document.querySelector('.rock_btn');
-// let Paper = document.querySelector('.paper_btn');
-// let Scissors = document.querySelector(',scissors_btn');
-// displays the winner of all rounds
-// let display = document.querySelector()
+let Rock = document.querySelector('.rock_btn');
+let Paper = document.querySelector('.paper_btn');
+let Scissors = document.querySelector('.scissors_btn');
+
+Rock.addEventListener('click', function rock_funcc () {
+  return Rock.value;
+})
+
+Paper.addEventListener('click', function paper_func () {
+  return Paper.value;
+})
+
+Scissors.addEventListener('click', function scissors_func () {
+  return Scissors.value;
+})
+
 
 
 let reset_btn = document.querySelector('.reset_btn');
